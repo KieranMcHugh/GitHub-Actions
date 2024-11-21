@@ -1,15 +1,17 @@
-nname: Assign to team member
+name: Assign New Issues
+
 on:
   issues:
-    types: [opened]
-permissions:
-  issues: write
+    types:
+      - opened
+
 jobs:
-  label-issue:
+  assign_issue:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Assign to KieranMcHugh
+      - name: Assign issue to a specific team member
         uses: actions-ecosystem/action-add-issue-assigner@v1
         with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            assignees: 'KieranMcHugh'
+          assignees: 'team-member-username' # Replace with the GitHub username of the team member
+          github_token: ${{ secrets.GITHUB_TOKEN }}
