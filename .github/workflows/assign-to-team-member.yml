@@ -2,7 +2,8 @@ name: Issue Assignment
 on:
   issues:
     types: [opened]
-
+permissions:
+  issues: write
 jobs:
   auto-assign:
     runs-on: ubuntu-latest
