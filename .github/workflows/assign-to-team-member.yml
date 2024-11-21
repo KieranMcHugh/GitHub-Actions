@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Auto-assign issue"
-        uses: pozil/auto-assign-issue@v1
+        uses: actions/github-script@v6
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           assignees: KieranMcHugh
