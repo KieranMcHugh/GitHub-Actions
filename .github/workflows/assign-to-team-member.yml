@@ -11,6 +11,6 @@ jobs:
     steps:
       # .take in an issue comment. 
       - name: take an issue
-        uses: bdougie/take-action@main
+        uses: KieranMcHugh/take-action@main
         env:
           GITHUB_TOKEN: ${{ github.token }}
