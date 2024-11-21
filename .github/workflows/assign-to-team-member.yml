@@ -1,7 +1,7 @@
 name: Assign issue to contributor
 on:
   issues:
-    types: [created, edited]
+    types: [opened]
 
 permissions:
   contents: read
