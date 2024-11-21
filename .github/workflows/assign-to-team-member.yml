@@ -11,7 +11,13 @@ jobs:
 
     steps:
       - name: Assign issue to a specific team member
-        uses: actions-ecosystem/action-add-issue-assignee@v1
+        uses: actions/github-script@v6
         with:
-          assignees: 'team-member-username' # Replace with the GitHub username of the team member
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const assignee = 'KieranMcHugh';
+            github.issues.addAssignees({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              assignees: [assignee]
+            });
