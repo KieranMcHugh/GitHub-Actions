@@ -11,6 +11,5 @@ jobs:
       - name: Assign to Team Member
         uses: actions-ecosystem/action-add-issue-assigner@v1
         with:
-            assignees: 'KieranMcHugh'
             github_token: ${{ secrets.GITHUB_TOKEN }}
-            labels: "To Do"
+            assignees: 'KieranMcHugh'
