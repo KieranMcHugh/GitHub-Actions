@@ -1,19 +1,19 @@
-name: Issue Assignment
+name: Auto Assign Issue
 
 
 on:
   issues:
     types: [opened]
-    
+
 permissions:
   issues: write
-  
+
 jobs:
   add_assignees:
     runs-on: ubuntu-latest
     steps:
-      - name: Assign new issues to a specific user
-        uses: actions-ecosystem/action-add-assignees@v1
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          assignees: "KieranMcHugh" # Replace X with the GitHub username of the team member
+    - name: Assign new issue to assignee
+      uses: actions-ecosystem/action-add-assignee@v1
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        assignees: "KieranMcHugh"
