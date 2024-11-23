@@ -1,9 +1,13 @@
 name: Issue Assignment
+
+
 on:
   issues:
     types: [opened]
+    
 permissions:
   issues: write
+  
 jobs:
   auto-assign:
     runs-on: ubuntu-latest
@@ -12,4 +16,4 @@ jobs:
         uses: actions-ecosystem/action-assign@v2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          assignees: KieranMcHugh # Replace X with the GitHub username of the team member
+          assignees: "KieranMcHugh" # Replace X with the GitHub username of the team member
