@@ -1,4 +1,4 @@
-name: Run Auto Tests
+name: Run Automated Testing
 
 on:
   push:
